@@ -1,4 +1,3 @@
 phrase = "The right format"
 
-phrase = phrase.rjust(41 , '-')
-print(phrase)
+print(phrase.rjust(41 , '-'))
