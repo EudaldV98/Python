@@ -1,6 +1,7 @@
 import sys
 import time
-​
+
+
 def create_bar(n, max_n):
 	len_bar = 23
 	len_arrow = len_bar * n // max_n
@@ -15,7 +16,7 @@ def create_bar(n, max_n):
 		i += 1
 	bar += "]"
 	return bar
-​
+
 def ft_progress(lst):
 	start = time.time()
 	max_lst = lst[-1]
@@ -26,7 +27,7 @@ def ft_progress(lst):
 		per = i * 100 // max_lst
 		print("ETA: {:5.2f}s [{:3}%] {} {:4}/{:4} | elapsed time {:5.2f}s".format(eta, per, create_bar(i, max_lst), i + 1, max_lst + 1, delta), end="\r", flush=True)
 		yield i
-​
+
 listy = range(200000)
 ret = 0
 for elem in ft_progress(listy):
