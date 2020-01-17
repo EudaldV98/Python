@@ -24,7 +24,7 @@ class Vector:
 	def __add__(self, v):
 		if isinstance(v, Vector) and len(self.values) == len(v.values):
 				self.values = [x + y for x, y in zip(self.values, v.values)]
-		else:
+		elif isinstance(v, int) or isinstance(v, float):
 			self.values = [x + float(v) for x in self.values]
 	
 	def __radd__(self, nb):
@@ -33,7 +33,7 @@ class Vector:
 	def __sub__(self, v):
 		if isinstance(v, Vector) and len(self.values) == len(v.values):
 			self.values = [x - y for x, y in zip(self.values, v.values)]
-		else:
+		elif isinstance(v, int) or isinstance(v, float):
 			self.values = [x - float(v) for x in self.values]
 	
 	def __rsub__(self, nb):
@@ -47,7 +47,7 @@ class Vector:
 					new_value.append(x / y)
 				except ZeroDivisionError:
 					new_value.append(x)
-		else:
+		elif isinstance(v, int) or isinstance(v, float):
 			for x in self.values:
 				try:
 					new_value.append(x / v)
@@ -61,7 +61,7 @@ class Vector:
 	def __mul__(self, v):
 		if isinstance(v, Vector) and len(self.values) == len(v.values):
 			self.values = [x * y for x, y in zip(self.values, v.values)]
-		else:
+		elif isinstance(v, int) or isinstance(v, float):
 			self.values = [x * float(v) for x in self.values]
 	
 	def __rmul__(self, nb):
