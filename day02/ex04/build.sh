@@ -1,0 +1,1 @@
+tar -czf ai42-1.0.0.tar.gz logger.py progressbar.py __init__.py
