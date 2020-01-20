@@ -44,8 +44,8 @@ def decrypt(message):
                 text = ''
     return result
 
-if all(i.isalnum() or i.isspace() for i in sys.argv[1]):
-    print(encrypt(sys.argv[1]))
-else:
-    print('ERROR')
-    sys.exit(0)
+#if all(i.isalnum() or i.isspace() for i in sys.argv[1]):
+print(encrypt(sys.argv[1]))
+#else:
+#    print('ERROR')
+#    sys.exit(0)
