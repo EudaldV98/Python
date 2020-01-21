@@ -19,3 +19,4 @@ class ImageProcessor():
 
 im = ImageProcessor()
 im.load("../assets/blue.png")
+
