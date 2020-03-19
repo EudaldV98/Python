@@ -1,4 +1,5 @@
 import numpy
+import scipy.misc
 from PIL import Image
 
 
@@ -10,13 +11,16 @@ class ImageProcessor():
 	def load(self, path):
 		try:
 			img = Image.open(path)
-			print(img)
+			arr = numpy.array(img)
+			return arr
 		except IOError:
 			pass
 
 	def display(self, array):
-		pass
-
-im = ImageProcessor()
-im.load("../assets/blue.png")
+		try:
+			im = Image.fromarray(array)
+			im.save("test.png")
+			im.show("test.png")
+		except IOError:
+			pass
 
